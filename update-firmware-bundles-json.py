@@ -19,13 +19,13 @@ import os.path
 while True:
 	dir_set = False
 	print 'Select unifi firmware directory:'
-	print ' 1) /usr/lib/unifi/dl'
+	print ' 1) /usr/lib/unifi/dl/firmware'
 	print ' 2) .'
 	print ' 3) custom path'
 	input = raw_input('Choice: ')
 
 	if input == '1':
-		new_path = '/usr/lib/unifi/dl'
+		new_path = '/usr/lib/unifi/dl/firmware'
 	elif input == '2':
 		new_path = '.'
 		dir_set = True
