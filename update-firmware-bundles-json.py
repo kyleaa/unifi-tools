@@ -83,8 +83,6 @@ for model in data:
       print '  %s) %s %s' % (num+1,name,selected)
       model_dirs.append(name)
   
-  def_version = version
-  
   if len(model_dirs) == 0:
     print bcolors.FAIL  + '  No firmware located in directory %s' + bcolors.ENDC % firmware_dir
     new_version = version
@@ -93,8 +91,8 @@ for model in data:
     new_version = model_dirs[0]
     print bcolors.WARNING  + '  No additional firmware located, no change made' + bcolors.ENDC
   else:
-    response = raw_input("\n  Select new firmware version [%s]: " % def_version)
-    new_version = def_version if (response == '') else model_dirs[int(response)-1]
+    response = raw_input("\n  Select new firmware version [%s]: " % version)
+    new_version = version if (response == '') else model_dirs[int(response)-1]
     if new_version == version:
 	  print bcolors.WARNING  + '  No change made' + bcolors.ENDC
     else:
