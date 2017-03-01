@@ -66,6 +66,8 @@ summary = []
 # loop through the hardware models
 import os
 for model in data:
+  if not "path" in data[model]
+    continue
   display = data[model]['display']
   path = data[model]['path']
   version = data[model]['version']
@@ -89,6 +91,8 @@ for model in data:
   elif len(model_dirs) == 1:
     # No need to prompt, use the one
     new_version = model_dirs[0]
+    if not new_version == version:
+	  summary.append(' %s [%s] updated from version %s to %s' % ( display, model, version, new_version) )
     print bcolors.WARNING  + '  No additional firmware located, no change made' + bcolors.ENDC
   else:
     response = raw_input("\n  Select new firmware version [%s]: " % version)
