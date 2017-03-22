@@ -66,7 +66,7 @@ summary = []
 # loop through the hardware models
 import os
 for model in data:
-  if not "path" in data[model]
+  if not "path" in data[model]:
     continue
   display = data[model]['display']
   path = data[model]['path']
